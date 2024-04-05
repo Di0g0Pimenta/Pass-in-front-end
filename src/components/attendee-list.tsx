@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ChevronsRight,
 } from "lucide-react";
+import { IconButton } from "./icon-button";
 
 export function AttendeeList() {
   return (
@@ -29,7 +30,10 @@ export function AttendeeList() {
                 style={{ width: 48 }}
                 className="py-3 px-4 text-sm font-semibold text-left"
               >
-                <input type="checkbox" className="size-4 bg-black/20 rounded border border-white/10"/>
+                <input
+                  type="checkbox"
+                  className="size-4 bg-black/20 rounded border border-white/10"
+                />
               </th>
               <th className="py-3 px-4 text-sm font-semibold text-left">
                 Código
@@ -52,9 +56,15 @@ export function AttendeeList() {
           <tbody>
             {Array.from({ length: 8 }).map((_, i) => {
               return (
-                <tr key={i} className="border-b border-white/10 hover:bg-white/5">
+                <tr
+                  key={i}
+                  className="border-b border-white/10 hover:bg-white/5"
+                >
                   <td className="py-3 px-4 text-sm text-zinc-300">
-                    <input type="checkbox" className="size-4 bg-black/20 rounded border border-white/10"/>
+                    <input
+                      type="checkbox"
+                      className="size-4 bg-black/20 rounded border border-white/10"
+                    />
                   </td>
                   <td className="py-3 px-4 text-sm text-zinc-300">12123</td>
                   <td className="py-3 px-4 text-sm text-zinc-300">
@@ -72,9 +82,9 @@ export function AttendeeList() {
                     3 dias atrás
                   </td>
                   <td className="py-3 px-4 text-sm text-zinc-300">
-                    <button>
-                      <MoreHorizontal className="bg-black/20 border border-white/10 rounded-md p-1.5" />
-                    </button>
+                    <IconButton transparent={true}>
+                      <MoreHorizontal className="size-4" />
+                    </IconButton>
                   </td>
                 </tr>
               );
@@ -93,18 +103,18 @@ export function AttendeeList() {
                   <span>Pagina 1 de 23</span>
 
                   <div className="flex gap-1.5">
-                    <button>
-                      <ChevronsLeft className="bg-white/10 border border-white/10 rounded-md p-1.5" />
-                    </button>
-                    <button>
-                      <ChevronLeft className="bg-white/10 border border-white/10 rounded-md p-1.5" />
-                    </button>
-                    <button>
-                      <ChevronRight className="bg-white/10 border border-white/10 rounded-md p-1.5" />
-                    </button>
-                    <button>
-                      <ChevronsRight className="bg-white/10 border border-white/10 rounded-md p-1.5" />
-                    </button>
+                    <IconButton>
+                      <ChevronsLeft className="size-4" />
+                    </IconButton>
+                    <IconButton>
+                      <ChevronLeft className="size-4" />
+                    </IconButton>
+                    <IconButton>
+                      <ChevronRight className="size-4" />
+                    </IconButton>
+                    <IconButton>
+                      <ChevronsRight className="size-4" />
+                    </IconButton>
                   </div>
                 </div>
               </td>
